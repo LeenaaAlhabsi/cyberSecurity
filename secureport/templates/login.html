@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/login.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        <form id="loginForm" method="POST" action="/login">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+
+            {% if show_captcha %}
+                <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+            {% endif %}
+
+            <button type="submit">Login</button>
+        </form>
+        <p>Failed Attempts: {{ attempts }}/3</p>
+        <div class="footer-links">
+            <a href="/">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

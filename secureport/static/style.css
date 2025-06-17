@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Light gray-blue background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    background: #ffffff; /* White card */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50; /* Dark blue-gray */
+}
+
+/* Subheading */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #7f8c8d; /* Soft gray */
+}
+
+/* Buttons */
+a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    background-color: #3498db; /* Soft blue */
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+a:hover {
+    background-color: #2980b9; /* Darker blue */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #95a5a6; /* Light gray */
+}
+
+/* Flash Messages */
+.flash-messages {
+    margin-bottom: 20px;
+}
+
+.flash-message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.flash-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.flash-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

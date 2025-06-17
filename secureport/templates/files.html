@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Files</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Uploaded Files</h1>
+    {% for user, user_files in files.items() %}
+        <h2>{{ user }}</h2>
+        <ul>
+            {% for file in user_files %}
+                <li>{{ file }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+    <a href="/upload">Back to Upload</a> | <a href="/logout">Logout</a>
+</body>
+</html>
